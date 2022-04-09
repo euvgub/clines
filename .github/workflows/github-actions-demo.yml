@@ -1,0 +1,15 @@
+name: GitHub Actions Demo
+on:
+  schedule:
+  - cron: "*/10 * * * * *" # Runs every 10 sec
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Commands
+        run: |
+          echo "Hello World"
+          echo "You can run any command in your workflow that way with Github Actions"
